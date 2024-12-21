@@ -1,0 +1,76 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #003366d6;
+    color: rgb(255, 255, 255);
+    padding: 30px 30px;
+}
+header .logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+header nav ul {
+    display: flex;
+}
+header nav ul li {
+    margin:15px;
+}
+header nav ul li a {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+
+}
+.upperc{
+    display: flex;
+    justify-content:left ;
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+}
+h1{
+    padding-top: 70px;
+}
+img{
+    padding-top: 30px;
+    width: 500px;
+}
+
+.team {
+    padding: 20px;
+    text-align: center;
+}
+
+footer {
+    background-color:  #003366f0;
+    color: white;
+    text-align: center;
+    padding: 10px 20px;
+}
+.b-con{
+    display: flex;
+    flex-direction:column;
+    padding: 40px 20px 60px;
+    text-align: center;
+
+}
+.b-con button {
+    margin: 30px;
+    width: 500px;
+    height: 100px;
+    border-radius: 10px;
+    border: solid rgba(128, 128, 128, 0.529);
+    background-color: rgba(128, 128, 128, 0.529);
+    cursor: pointer;
+}
+button:hover{
+    opacity: 0.7;
+}
+h1{
+   text-align:  center;
+   color: #003366;
+}

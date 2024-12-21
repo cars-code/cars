@@ -1,0 +1,659 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mercedes Cars</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #3b0000;
+        }
+        header {
+            background-color: #000000;
+            color: white;
+            text-align: center;
+            padding: 1em 0;
+        }
+        .car-list {
+            max-width: 800px;
+            margin: 20px auto;
+            background: rgb(255, 143, 143);
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .car-list h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #333;
+        }
+        .car-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 15px;
+        }
+        .car-item:last-child {
+            border-bottom: none;
+        }
+        .car-image {
+            flex: 1;
+            max-width: 150px;
+        }
+        .car-image img {
+            width: 100%;
+            border-radius: 8px;
+        }
+        .car-details {
+            flex: 2;
+            margin-left: 20px;
+        }
+        .car-details h3 {
+            margin: 0 0 10px;
+            color: #333;
+        }
+        .car-details p {
+            margin: 5px 0;
+            color: #555;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Mercedes Car Models</h1>
+</header>
+
+<section class="car-list">
+    <h2>Some of Mercedes Cars</h2>
+
+    <div class="car-item">
+        <div class="car-image">
+            <img src="mercedes-benzA-class.jpg" alt="Mercedes-Benz A-Class">
+        </div>
+        <div class="car-details">
+            <h3>Mercedes-Benz A-Class</h3>
+            <p>Compact and stylish, perfect for city driving.</p>
+            <p>Engine: 2.0L Turbocharged</p>
+            <p>Price: $35,000</p>
+        </div>
+        <div class="rating">
+            <label for="rate-s-class">Rate this car:</label>
+            <input type="number" id="rate-s-class" min="1" max="5" placeholder="1-5">
+            <button onclick="alert('Rating submitted for S-Class: ' + document.getElementById('rate-s-class').value)">Submit</button>
+        </div>
+        <div class="interaction-section">
+            <!-- Like Button -->
+            <button class="like-button" onclick="handleLike()">Like</button>
+            <span class="like-count" id="like-count">0 Likes</span>
+        
+            <!-- Comment Section -->
+            <div class="comment-section">
+                <textarea id="comment-input" rows="3" placeholder="Add a comment..."></textarea>
+                <button onclick="handleComment()">Post Comment</button>
+        
+                <!-- Display Comments -->
+                <div class="comments" id="comments"></div>
+            </div>
+        </div>
+        
+        <script>
+            let likeCount = 0;
+        
+            function handleLike() {
+                likeCount++;
+                document.getElementById('like-count').textContent = ${likeCount} ${likeCount === 1 ? 'Like' : 'Likes'};
+            }
+        
+            function handleComment() {
+                const commentInput = document.getElementById('comment-input');
+                const commentText = commentInput.value.trim();
+        
+                if (commentText !== '') {
+                    const commentSection = document.getElementById('comments');
+                    const commentDiv = document.createElement('div');
+                    commentDiv.className = 'comment';
+                    commentDiv.textContent = commentText;
+        
+                    commentSection.appendChild(commentDiv);
+                    commentInput.value = '';
+                } else {
+                    alert('Please enter a comment before posting.');
+                }
+            }
+        </script>
+        
+    </div>
+
+    <div class="car-item">
+        <div class="car-image">
+            <img src="mercedes-benzc-class.jpg" alt="Mercedes-Benz C-Class">
+        </div>
+        <div class="car-details">
+            <h3>Mercedes-Benz C-Class</h3>
+            <p>Luxury sedan with advanced technology.</p>
+            <p>Engine: 2.0L Turbocharged</p>
+            <p>Price: $43,000</p>
+        </div>
+        <div class="rating">
+            <label for="rate-s-class">Rate this car:</label>
+            <input type="number" id="rate-s-class" min="1" max="5" placeholder="1-5">
+            <button onclick="alert('Rating submitted for S-Class: ' + document.getElementById('rate-s-class').value)">Submit</button>
+        </div>
+        <div class="interaction-section">
+            <!-- Like Button -->
+            <button class="like-button" onclick="handleLike()">Like</button>
+            <span class="like-count" id="like-count">0 Likes</span>
+        
+            <!-- Comment Section -->
+            <div class="comment-section">
+                <textarea id="comment-input" rows="3" placeholder="Add a comment..."></textarea>
+                <button onclick="handleComment()">Post Comment</button>
+        
+                <!-- Display Comments -->
+                <div class="comments" id="comments"></div>
+            </div>
+        </div>
+        
+        <script>
+            let likeCount = 0;
+        
+            function handleLike() {
+                likeCount++;
+                document.getElementById('like-count').textContent = ${likeCount} ${likeCount === 1 ? 'Like' : 'Likes'};
+            }
+        
+            function handleComment() {
+                const commentInput = document.getElementById('comment-input');
+                const commentText = commentInput.value.trim();
+        
+                if (commentText !== '') {
+                    const commentSection = document.getElementById('comments');
+                    const commentDiv = document.createElement('div');
+                    commentDiv.className = 'comment';
+                    commentDiv.textContent = commentText;
+        
+                    commentSection.appendChild(commentDiv);
+                    commentInput.value = '';
+                } else {
+                    alert('Please enter a comment before posting.');
+                }
+            }
+        </script>
+        
+    </div>
+
+    <div class="car-item">
+        <div class="car-image">
+            <img src="mercedes-benz e-class.jpg" alt="Mercedes-Benz E-Class">
+        </div>
+        <div class="car-details">
+            <h3>Mercedes-Benz E-Class</h3>
+            <p>Combines performance and luxury effortlessly.</p>
+            <p>Engine: 3.0L Inline-6</p>
+            <p>Price: $55,000</p>
+        </div>
+        <div class="rating">
+            <label for="rate-s-class">Rate this car:</label>
+            <input type="number" id="rate-s-class" min="1" max="5" placeholder="1-5">
+            <button onclick="alert('Rating submitted for S-Class: ' + document.getElementById('rate-s-class').value)">Submit</button>
+        </div>
+        <div class="interaction-section">
+            <!-- Like Button -->
+            <button class="like-button" onclick="handleLike()">Like</button>
+            <span class="like-count" id="like-count">0 Likes</span>
+        
+            <!-- Comment Section -->
+            <div class="comment-section">
+                <textarea id="comment-input" rows="3" placeholder="Add a comment..."></textarea>
+                <button onclick="handleComment()">Post Comment</button>
+        
+                <!-- Display Comments -->
+                <div class="comments" id="comments"></div>
+            </div>
+        </div>
+        
+        <script>
+            let likeCount = 0;
+        
+            function handleLike() {
+                likeCount++;
+                document.getElementById('like-count').textContent = ${likeCount} ${likeCount === 1 ? 'Like' : 'Likes'};
+            }
+        
+            function handleComment() {
+                const commentInput = document.getElementById('comment-input');
+                const commentText = commentInput.value.trim();
+        
+                if (commentText !== '') {
+                    const commentSection = document.getElementById('comments');
+                    const commentDiv = document.createElement('div');
+                    commentDiv.className = 'comment';
+                    commentDiv.textContent = commentText;
+        
+                    commentSection.appendChild(commentDiv);
+                    commentInput.value = '';
+                } else {
+                    alert('Please enter a comment before posting.');
+                }
+            }
+        </script>
+        
+    </div>
+
+    <div class="car-item">
+        <div class="car-image">
+            <img src="mercedes-benz gle.jpg" alt="Mercedes-Benz GLE">
+        </div>
+        <div class="car-details">
+            <h3>Mercedes-Benz GLE</h3>
+            <p>Spacious SUV with cutting-edge features.</p>
+            <p>Engine: 3.0L Inline-6 Turbo</p>
+            <p>Price: $57,000</p>
+        </div>
+        <div class="rating">
+            <label for="rate-s-class">Rate this car:</label>
+            <input type="number" id="rate-s-class" min="1" max="5" placeholder="1-5">
+            <button onclick="alert('Rating submitted for S-Class: ' + document.getElementById('rate-s-class').value)">Submit</button>
+        </div>
+        <div class="interaction-section">
+            <!-- Like Button -->
+            <button class="like-button" onclick="handleLike()">Like</button>
+            <span class="like-count" id="like-count">0 Likes</span>
+        
+            <!-- Comment Section -->
+            <div class="comment-section">
+                <textarea id="comment-input" rows="3" placeholder="Add a comment..."></textarea>
+                <button onclick="handleComment()">Post Comment</button>
+        
+                <!-- Display Comments -->
+                <div class="comments" id="comments"></div>
+            </div>
+        </div>
+        
+        <script>
+            let likeCount = 0;
+        
+            function handleLike() {
+                likeCount++;
+                document.getElementById('like-count').textContent = ${likeCount} ${likeCount === 1 ? 'Like' : 'Likes'};
+            }
+        
+            function handleComment() {
+                const commentInput = document.getElementById('comment-input');
+                const commentText = commentInput.value.trim();
+        
+                if (commentText !== '') {
+                    const commentSection = document.getElementById('comments');
+                    const commentDiv = document.createElement('div');
+                    commentDiv.className = 'comment';
+                    commentDiv.textContent = commentText;
+        
+                    commentSection.appendChild(commentDiv);
+                    commentInput.value = '';
+                } else {
+                    alert('Please enter a comment before posting.');
+                }
+            }
+        </script>
+        
+    </div>
+
+    <div class="car-item">
+        <div class="car-image">
+            <img src="mercedes-benz s-class.jpg" alt="Mercedes-Benz S-Class">
+        </div>
+        <div class="car-details">
+            <h3>Mercedes-Benz S-Class</h3>
+            <p>The pinnacle of luxury and innovation.</p>
+            <p>Engine: 4.0L V8 Biturbo</p>
+            <p>Price: $110,000</p>
+        </div>
+        <div class="rating">
+            <label for="rate-s-class">Rate this car:</label>
+            <input type="number" id="rate-s-class" min="1" max="5" placeholder="1-5">
+            <button onclick="alert('Rating submitted for S-Class: ' + document.getElementById('rate-s-class').value)">Submit</button>
+        </div>
+        <div class="interaction-section">
+            <!-- Like Button -->
+            <button class="like-button" onclick="handleLike()">Like</button>
+            <span class="like-count" id="like-count">0 Likes</span>
+        
+            <!-- Comment Section -->
+            <div class="comment-section">
+                <textarea id="comment-input" rows="3" placeholder="Add a comment..."></textarea>
+                <button onclick="handleComment()">Post Comment</button>
+        
+                <!-- Display Comments -->
+                <div class="comments" id="comments"></div>
+            </div>
+            
+        </div>
+        
+        <script>
+            let likeCount = 0;
+        
+            function handleLike() {
+                likeCount++;
+                document.getElementById('like-count').textContent = ${likeCount} ${likeCount === 1 ? 'Like' : 'Likes'};
+            }
+        
+            function handleComment() {
+                const commentInput = document.getElementById('comment-input');
+                const commentText = commentInput.value.trim();
+        
+                if (commentText !== '') {
+                    const commentSection = document.getElementById('comments');
+                    const commentDiv = document.createElement('div');
+                    commentDiv.className = 'comment';
+                    commentDiv.textContent = commentText;
+        
+                    commentSection.appendChild(commentDiv);
+                    commentInput.value = '';
+                } else {
+                    alert('Please enter a comment before posting.');
+                }
+            }
+        </script>
+        
+    </div>
+
+    <div class="car-item">
+        <div class="car-image">
+            <img src="mercedes-benz glc.jpg" alt="Mercedes-Benz GLC">
+        </div>
+        <div class="car-details">
+            <h3>Mercedes-Benz GLC</h3>
+            <p>Premium compact SUV with sporty handling.</p>
+            <p>Engine: 2.0L Turbocharged</p>
+            <p>Price: $43,500</p>
+        </div>
+        <div class="rating">
+            <label for="rate-s-class">Rate this car:</label>
+            <input type="number" id="rate-s-class" min="1" max="5" placeholder="1-5">
+            <button onclick="alert('Rating submitted for S-Class: ' + document.getElementById('rate-s-class').value)">Submit</button>
+        </div>
+        
+        <div class="interaction-section">
+            <!-- Like Button -->
+            <button class="like-button" onclick="handleLike()">Like</button>
+            <span class="like-count" id="like-count">0 Likes</span>
+        
+            <!-- Comment Section -->
+            <div class="comment-section">
+                <textarea id="comment-input" rows="3" placeholder="Add a comment..."></textarea>
+                <button onclick="handleComment()">Post Comment</button>
+        
+                <!-- Display Comments -->
+                <div class="comments" id="comments"></div>
+            </div>
+        </div>
+        
+        <script>
+            let likeCount = 0;
+        
+            function handleLike() {
+                likeCount++;
+                document.getElementById('like-count').textContent = ${likeCount} ${likeCount === 1 ? 'Like' : 'Likes'};
+            }
+        
+            function handleComment() {
+                const commentInput = document.getElementById('comment-input');
+                const commentText = commentInput.value.trim();
+        
+                if (commentText !== '') {
+                    const commentSection = document.getElementById('comments');
+                    const commentDiv = document.createElement('div');
+                    commentDiv.className = 'comment';
+                    commentDiv.textContent = commentText;
+        
+                    commentSection.appendChild(commentDiv);
+                    commentInput.value = '';
+                } else {
+                    alert('Please enter a comment before posting.');
+                }
+            }
+        </script>
+        
+    </div>
+
+    <div class="car-item">
+        <div class="car-image">
+            <img src="mercedes-benz cls.jpg" alt="Mercedes-Benz CLS">
+        </div>
+        <div class="car-details">
+            <h3>Mercedes-Benz CLS</h3>
+            <p>Four-door coupe with a bold design.</p>
+            <p>Engine: 3.0L Inline-6 Turbo</p>
+            <p>Price: $72,000</p>
+        </div>
+        <div class="rating">
+            <label for="rate-s-class">Rate this car:</label>
+            <input type="number" id="rate-s-class" min="1" max="5" placeholder="1-5">
+            <button onclick="alert('Rating submitted for S-Class: ' + document.getElementById('rate-s-class').value)">Submit</button>
+        </div>
+        <div class="interaction-section">
+            <!-- Like Button -->
+            <button class="like-button" onclick="handleLike()">Like</button>
+            <span class="like-count" id="like-count">0 Likes</span>
+        
+            <!-- Comment Section -->
+            <div class="comment-section">
+                <textarea id="comment-input" rows="3" placeholder="Add a comment..."></textarea>
+                <button onclick="handleComment()">Post Comment</button>
+        
+                <!-- Display Comments -->
+                <div class="comments" id="comments"></div>
+            </div>
+        </div>
+        
+        <script>
+            let likeCount = 0;
+        
+            function handleLike() {
+                likeCount++;
+                document.getElementById('like-count').textContent = ${likeCount} ${likeCount === 1 ? 'Like' : 'Likes'};
+            }
+        
+            function handleComment() {
+                const commentInput = document.getElementById('comment-input');
+                const commentText = commentInput.value.trim();
+        
+                if (commentText !== '') {
+                    const commentSection = document.getElementById('comments');
+                    const commentDiv = document.createElement('div');
+                    commentDiv.className = 'comment';
+                    commentDiv.textContent = commentText;
+        
+                    commentSection.appendChild(commentDiv);
+                    commentInput.value = '';
+                } else {
+                    alert('Please enter a comment before posting.');
+                }
+            }
+        </script>
+        
+    </div>
+
+    <div class="car-item">
+        <div class="car-image">
+            <img src="mercedes-benz eqs.jpg" alt="Mercedes-Benz EQS">
+        </div>
+        <div class="car-details">
+            <h3>Mercedes-Benz EQS</h3>
+            <p>Fully electric luxury sedan with a futuristic design.</p>
+            <p>Range: 350 miles</p>
+            <p>Price: $102,000</p>
+        </div>
+        <div class="rating">
+            <label for="rate-s-class">Rate this car:</label>
+            <input type="number" id="rate-s-class" min="1" max="5" placeholder="1-5">
+            <button onclick="alert('Rating submitted for S-Class: ' + document.getElementById('rate-s-class').value)">Submit</button>
+        </div>
+        <div class="interaction-section">
+            <!-- Like Button -->
+            <button class="like-button" onclick="handleLike()">Like</button>
+            <span class="like-count" id="like-count">0 Likes</span>
+        
+            <!-- Comment Section -->
+            <div class="comment-section">
+                <textarea id="comment-input" rows="3" placeholder="Add a comment..."></textarea>
+                <button onclick="handleComment()">Post Comment</button>
+        
+                <!-- Display Comments -->
+                <div class="comments" id="comments"></div>
+            </div>
+        </div>
+        
+        <script>
+            let likeCount = 0;
+        
+            function handleLike() {
+                likeCount++;
+                document.getElementById('like-count').textContent = ${likeCount} ${likeCount === 1 ? 'Like' : 'Likes'};
+            }
+        
+            function handleComment() {
+                const commentInput = document.getElementById('comment-input');
+                const commentText = commentInput.value.trim();
+        
+                if (commentText !== '') {
+                    const commentSection = document.getElementById('comments');
+                    const commentDiv = document.createElement('div');
+                    commentDiv.className = 'comment';
+                    commentDiv.textContent = commentText;
+        
+                    commentSection.appendChild(commentDiv);
+                    commentInput.value = '';
+                } else {
+                    alert('Please enter a comment before posting.');
+                }
+            }
+        </script>
+        
+    </div>
+
+    <div class="car-item">
+        <div class="car-image">
+            <img src="mercedes-benz glb.jpg" alt="Mercedes-Benz GLB">
+        </div>
+        <div class="car-details">
+            <h3>Mercedes-Benz GLB</h3>
+            <p>Versatile SUV with optional third-row seating.</p>
+            <p>Engine: 2.0L Turbocharged</p>
+            <p>Price: $39,000</p>
+        </div>
+        <div class="rating">
+            <label for="rate-s-class">Rate this car:</label>
+            <input type="number" id="rate-s-class" min="1" max="5" placeholder="1-5">
+            <button onclick="alert('Rating submitted for S-Class: ' + document.getElementById('rate-s-class').value)">Submit</button>
+        </div>
+        <div class="interaction-section">
+            <!-- Like Button -->
+            <button class="like-button" onclick="handleLike()">Like</button>
+            <span class="like-count" id="like-count">0 Likes</span>
+        
+            <!-- Comment Section -->
+            <div class="comment-section">
+                <textarea id="comment-input" rows="3" placeholder="Add a comment..."></textarea>
+                <button onclick="handleComment()">Post Comment</button>
+        
+                <!-- Display Comments -->
+                <div class="comments" id="comments"></div>
+            </div>
+        </div>
+        
+        <script>
+            let likeCount = 0;
+        
+            function handleLike() {
+                likeCount++;
+                document.getElementById('like-count').textContent = ${likeCount} ${likeCount === 1 ? 'Like' : 'Likes'};
+            }
+        
+            function handleComment() {
+                const commentInput = document.getElementById('comment-input');
+                const commentText = commentInput.value.trim();
+        
+                if (commentText !== '') {
+                    const commentSection = document.getElementById('comments');
+                    const commentDiv = document.createElement('div');
+                    commentDiv.className = 'comment';
+                    commentDiv.textContent = commentText;
+        
+                    commentSection.appendChild(commentDiv);
+                    commentInput.value = '';
+                } else {
+                    alert('Please enter a comment before posting.');
+                }
+            }
+        </script>
+        
+    </div>
+
+    <div class="car-item">
+        <div class="car-image">
+            <img src="mercedes-maybach s-class.jpg" alt="Mercedes-Maybach S-Class">
+        </div>
+        <div class="car-details">
+            <h3>Mercedes-Maybach S-Class</h3>
+            <p>Ultimate luxury sedan with bespoke features.</p>
+            <p>Engine: 6.0L V12 Biturbo</p>
+            <p>Price: $185,000</p>
+        </div>
+        <div class="rating">
+            <label for="rate-s-class">Rate this car:</label>
+            <input type="number" id="rate-s-class" min="1" max="5" placeholder="1-5">
+            <button onclick="alert('Rating submitted for S-Class: ' + document.getElementById('rate-s-class').value)">Submit</button>
+        </div>
+        <div class="interaction-section">
+            <!-- Like Button -->
+            <button class="like-button" onclick="handleLike()">Like</button>
+            <span class="like-count" id="like-count">0 Likes</span>
+        
+            <!-- Comment Section -->
+            <div class="comment-section">
+                <textarea id="comment-input" rows="3" placeholder="Add a comment..."></textarea>
+                <button onclick="handleComment()">Post Comment</button>
+        
+                <!-- Display Comments -->
+                <div class="comments" id="comments"></div>
+            </div>
+        </div>
+        
+        <script>
+            let likeCount = 0;
+        
+            function handleLike() {
+                likeCount++;
+                document.getElementById('like-count').textContent = ${likeCount} ${likeCount === 1 ? 'Like' : 'Likes'};
+            }
+        
+            function handleComment() {
+                const commentInput = document.getElementById('comment-input');
+                const commentText = commentInput.value.trim();
+        
+                if (commentText !== '') {
+                    const commentSection = document.getElementById('comments');
+                    const commentDiv = document.createElement('div');
+                    commentDiv.className = 'comment';
+                    commentDiv.textContent = commentText;
+        
+                    commentSection.appendChild(commentDiv);
+                    commentInput.value = '';
+                } else {
+                    alert('Please enter a comment before posting.');
+                }
+            }
+        </script>
+        
+    </div>
+
+</section>
+
+</body>
+</html>

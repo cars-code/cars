@@ -1,0 +1,50 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color:white ;
+    color: rgb(30, 28, 30);
+  }
+  
+  .container {
+    width: 90%;
+    margin: 20px auto;
+  }
+  
+  h1 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .car-table {
+    width: 100%;
+    background-color:white;
+    border: 1px solid #ddd;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 20px;
+  }
+  
+  .car-table th,
+  .car-table td {
+    padding: 15px;
+    text-align: left;
+    border: 1px solid #ddd;
+  }
+  
+  .car-table th {
+    background-color:#003366d6 ;
+    color: #fff;
+    border-radius: 20px;
+  }
+  
+  .car-table td {
+    vertical-align: middle;
+    border-radius: 20px;
+  }
+  
+  .car-image {
+    width: 100px;
+    height: auto;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+  }
